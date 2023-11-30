@@ -7,11 +7,11 @@
 </head>
 <body>
     <header>
-        <img src="https://img.freepik.com/vector-premium/logotipo-diseno-alimentos-calidad-catering_187482-593.jpg" alt="Mozzabar" sizes="50%"/>
+        <img src="https://img.freepik.com/vector-premium/logotipo-diseno-alimentos-calidad-catering_187482-593.jpg" alt="Mozzabar"/>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Concepto</a></li>
+                <li><a href="#cabecera_principal">Home</a></li>
+                <li><a href="#concepto">Concepto</a></li>
                 <li><a href="#">Fotos</a></li>
                 <li><a href="#">Menú</a></li>
                 <li><a href="#">Reservas</a></li>
@@ -23,7 +23,7 @@
     </header>
     <main>
         <section>
-            <div class="cabecera_principal">
+            <div id="cabecera_principal">
                 <h2>Descubre</h2>
                 <h1>Mozzabar</h1>
                 <h3>We are open</h3>
@@ -31,15 +31,16 @@
         </section>
         <section>
             <article>
-                <div class="concepto">
+                <div id="concepto">
                     <h3>CONCEPTO</h3>
-                <p>Mozza Bar es un fantastico restaurante de cocina internacional ubicado en el exclusivo barrio de salamanca. Distribuido en una unica planta y una estupenda terraza, destaca por su decoracion urbana con toques rústicos, que dotan al local de un ambiente especial y acogedor.</p>
-                <p>Disfruta de sus desayunos, estimula tus sentidos con nuestros mejores platos o disfruta de nuestro <em>AfterWork</em> en buena compañía.</p>
+                    <p>Mozza Bar es un fantastico restaurante de cocina internacional ubicado en el exclusivo barrio de salamanca. Distribuido en una unica planta y una estupenda terraza, destaca por su decoracion urbana con toques rústicos, que dotan al local de un ambiente especial y acogedor.</p>
+                    <p>Disfruta de sus desayunos, estimula tus sentidos con nuestros mejores platos o disfruta de nuestro <em>AfterWork</em> en buena compañía.</p>
+                    <p>En Mozza Bar encontrarás clasicos de la gastronomía mundial, elaborados con productos siempre frescos, de calidad y un toque de personalidad.</p>
                 </div>
                 
             </article>
             <article>
-                <ul>
+                <ul class="galeria">
                     <li><img src="https://images.pexels.com/photos/1581384/pexels-photo-1581384.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="img1"/></li>
                     <li><img src="https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="img2"/></li>
                     <li><img src="https://images.pexels.com/photos/397913/pexels-photo-397913.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="img3"/></li>
@@ -217,11 +218,11 @@
                 <input type="button" value="Ver la carta de desayunos"/>
             </article>
         <section>
-            <article>
+            <article class="reservas">
                 <h3>RESERVAS</h3>
                 <form>
-                    <p>Personas</p>
-                    <select  name="Personas" placeholder="2 personas">
+                    <label for="personas">Personas</label>  <!--<p>Personas</p> -->
+                    <select  name="personas" placeholder="2 personas">
                         <option value="2 personas">2 personas</option>
                         <option value="3 personas">3 personas</option>
                         <option value="4 personas">4 personas</option>
@@ -229,18 +230,20 @@
                         <option value="6 personas">6 personas</option>
                     </select>
 
-                    <p>Hora</p>
-                    <select  name="Hora" placeholder="Seleccione una hora">
+                    <label for="hora">Hora</label>  <!--<p>Hora</p> -->
+                    <select  name="hora" placeholder="Seleccione una hora">
+                        <option value="selechora">Seleccione una hora</option>
                         <option value="13:00">13:00</option>
                         <option value="14:00">14:00</option>
                         <option value="15:00">15:00</option>
                     </select>
 
-                    <p>Mesa</p>
-                    <select  name="Mesa" placeholder="Seleccione el tipo de mesa"> <!-- El placeholder no funciona, ¿como se pone un placeholder aqui?-->
-                        <option value="grande">grande</option>
-                        <option value="pequeña">pequeña</option>
-                        <option value="exterior">exterior</option>
+                    <label for="mesa">Mesa</label>  <!--<p>Mesa</p> -->
+                    <select  name="mesa" placeholder="Seleccione el tipo de mesa">  <!-- El placeholder no funciona, ¿como se pone un placeholder aqui?-->
+                        <option value="tipomesa">Seleccione el tipo de mesa</option> 
+                        <option value="grande">Alta</option>
+                        <option value="pequeña">Baja</option>
+                        <option value="exterior">Exterior</option>
                     </select>
 
                     <button type="submit">Reservar</button>
